@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Lara Video Games</title>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-orange-900 text-white">
 
     <header class="border-b border-gray-800">
         <nav class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 py-6">
@@ -27,7 +27,7 @@
 
                 <div class="relative">
 
-                    <input type="text" class=" text-center bg-gray-800 text-sm rounded-full px-3 py-1 w-64 focus:outline-none focus:shadow-outline" placeholder="Search...">
+                    <input type="text" class=" text-center bg-orange-100 text-black text-sm rounded-full px-3 py-1 w-64 focus:outline-none focus:shadow-outline" placeholder="Search...">
                 
                     <div class="absolute top-0">
                         <img src="images/search.png" alt="search_logo" class="w-7 flex-none rounded-3xl">
