@@ -17,6 +17,7 @@ class GamesController extends Controller
     {
         //
 
+        /*
         $before = Carbon::now()->subMonths(6)->timestamp;
         $oneYear = Carbon::now()->subMonths(12)->timestamp;
         $after = Carbon::now()->addMonths(2)->timestamp;
@@ -121,6 +122,32 @@ class GamesController extends Controller
 
             // dump($comming);
 
+        */
+
+        /*
+        $client = new \GuzzleHttp\Client ( ['base_uri' => 'https://api.igdb.com/v4/']);
+        $response = $client->request('POST', 'multiquery', [
+            'headers'=> [
+                'Client-ID' => env('CLIENT_ID'),
+                'Authorization' => env('AUTHOR_IGBD')
+            ],
+            'body' => 
+                        'query games "Playstation Games" {
+                                                            fields name,platforms.name;
+                                                            where platforms !=n & platforms = {48};
+                                                            limit 1;
+                                                        };
+
+                        query games "Switch" {
+                                                            fields name,platforms.name;
+                                                            where platforms !=n & platforms = {48};
+                                                            limit 1;
+                                                        };'
+                    ]);
+
+        $body = $response->getBody();
+        dd(\json_decode($body));
+        */
         return view ('index', compact('popularGames', 'recentlyReview','antecipated','comming'));
        
     }
